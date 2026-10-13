@@ -1,0 +1,3 @@
+package com.pulselens.analytics.entity;
+import jakarta.persistence.*;import java.time.LocalDateTime;
+@Entity @Table(name="bookmarks",uniqueConstraints=@UniqueConstraint(columnNames={"user_id","article_id"})) public class Bookmark {@Id @GeneratedValue(strategy=GenerationType.IDENTITY) private Long id;@Column(name="user_id",nullable=false) private Long userId;@Column(name="article_id",nullable=false) private Long articleId;private LocalDateTime createdAt=LocalDateTime.now();public Long getId(){return id;}public Long getUserId(){return userId;}public void setUserId(Long v){userId=v;}public Long getArticleId(){return articleId;}public void setArticleId(Long v){articleId=v;}public LocalDateTime getCreatedAt(){return createdAt;}}

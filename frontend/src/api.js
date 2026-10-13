@@ -1,0 +1,1 @@
+import axios from 'axios';const api=axios.create({baseURL:'/api',withCredentials:true,headers:{'Content-Type':'application/json'}});api.interceptors.response.use(r=>r,e=>Promise.reject(new Error(e?.response?.data?.message||e?.response?.data?.error||e.message||'Request failed')));export default api;

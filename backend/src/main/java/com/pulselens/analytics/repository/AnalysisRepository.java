@@ -1,0 +1,1 @@
+package com.pulselens.analytics.repository;import com.pulselens.analytics.entity.AnalysisRecord;import org.springframework.data.jpa.repository.JpaRepository;import java.util.List;public interface AnalysisRepository extends JpaRepository<AnalysisRecord,Long>{List<AnalysisRecord> findTop100ByUserIdOrderByCreatedAtDesc(Long userId);long countByUserId(Long userId);}

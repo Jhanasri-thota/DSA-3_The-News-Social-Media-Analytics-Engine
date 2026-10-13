@@ -1,0 +1,3 @@
+package com.pulselens.analytics.entity;
+import jakarta.persistence.*;import java.time.LocalDateTime;
+@Entity @Table(name="search_history") public class SearchRecord {@Id @GeneratedValue(strategy=GenerationType.IDENTITY) private Long id;@Column(nullable=false) private Long userId;@Column(nullable=false,length=1000) private String queryText;private int resultCount;private LocalDateTime searchedAt=LocalDateTime.now();public Long getId(){return id;}public Long getUserId(){return userId;}public void setUserId(Long v){userId=v;}public String getQueryText(){return queryText;}public void setQueryText(String v){queryText=v;}public int getResultCount(){return resultCount;}public void setResultCount(int v){resultCount=v;}public LocalDateTime getSearchedAt(){return searchedAt;}}

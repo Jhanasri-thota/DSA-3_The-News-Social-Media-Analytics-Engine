@@ -1,0 +1,1 @@
+package com.pulselens.analytics.repository;import com.pulselens.analytics.entity.SearchRecord;import org.springframework.data.jpa.repository.JpaRepository;import java.util.List;public interface SearchRepository extends JpaRepository<SearchRecord,Long>{List<SearchRecord> findTop100ByUserIdOrderBySearchedAtDesc(Long userId);}

@@ -1,0 +1,1 @@
+package com.pulselens.analytics.repository;import com.pulselens.analytics.entity.SocialPost;import org.springframework.data.jpa.repository.JpaRepository;import java.util.List;public interface SocialRepository extends JpaRepository<SocialPost,Long>{List<SocialPost> findTop100ByOrderByPostedAtDesc();}
